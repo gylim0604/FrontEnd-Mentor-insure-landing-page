@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+$karla : 'Karla', sans-serif;
+$karla-normal: 400;
+$karla-bold: 700;
+$dm_serif: 'DM Serif Display', serif;
+$dm_serif-normal: 400;
+
+$font-size: 16px;
+
+// Colors
+$dark-violet: hsl(256, 26%, 20%);
+$gray-blue: hsl(216, 30%, 68%);
+$v-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0,0,100%);
+
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    font-size: $font-size;
+    font-family: $karla;
+    font-family: $karla-normal;
+}
+
+.width-wrapper{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+}
+
+.header-logo{
+    height: 1.5rem;
+    width: auto;
+}
+
+
+.nav-items, .nav-btn_close{
+    display: none;
+}
+
+// hero section
+.hero-img{
+    display: flex;
+}
+
+.hero-content{
+    height: 70vh;
+    background: 
+    url('../images/mobile/bg-pattern-intro-left-mobile.svg') no-repeat,
+    url('../images/mobile/bg-pattern-intro-right-mobile.svg') no-repeat right bottom -140%,
+    $dark-violet;
+    color: white;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+        font-family: $dm_serif;
+        font-weight: $dm_serif-normal;
+        font-size: 2.8rem;
+    }
+    p{
+        padding: 1rem 0 2rem;
+        line-height: 1.5rem;
+    }
+    span{
+        
+        margin: 1rem 0;
+        a{
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            border: 2px solid $white;
+            padding: .75rem 1.75rem;
+            color: $white;
+            font-weight: $karla-bold;
+        }
+    }
+}

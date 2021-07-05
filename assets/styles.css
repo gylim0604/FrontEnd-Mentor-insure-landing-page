@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-family: 400;
+}
+
+.width-wrapper {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 15vh;
+}
+
+.header-logo {
+  height: 1.5rem;
+  width: auto;
+}
+
+.nav-items, .nav-btn_close {
+  display: none;
+}
+
+.hero-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-content {
+  height: 70vh;
+  background: url("../images/mobile/bg-pattern-intro-left-mobile.svg") no-repeat, url("../images/mobile/bg-pattern-intro-right-mobile.svg") no-repeat right bottom -140%, #2d2640;
+  color: white;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-content h1 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+
+.hero-content p {
+  padding: 1rem 0 2rem;
+  line-height: 1.5rem;
+}
+
+.hero-content span {
+  margin: 1rem 0;
+}
+
+.hero-content span a {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  border: 2px solid white;
+  padding: .75rem 1.75rem;
+  color: white;
+  font-weight: 700;
+}
+/*# sourceMappingURL=styles.css.map */
