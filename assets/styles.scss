@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
 
-$karla : 'Karla', sans-serif;
+$karla: 'Karla', sans-serif;
 $karla-normal: 400;
 $karla-bold: 700;
 $dm_serif: 'DM Serif Display', serif;
@@ -14,10 +14,10 @@ $gray-blue: hsl(216, 30%, 68%);
 $v-dark-violet: hsl(270, 9%, 17%);
 $dark-grayish-violet: hsl(273, 4%, 51%);
 $very-light-gray: hsl(0, 0%, 98%);
-$white: hsl(0,0,100%);
+$white: hsl(0, 0, 100%);
 
-
-body{
+body {
+    background: hsl(0, 0%, 98%);
     width: 100vw;
     min-height: 100vh;
     font-size: $font-size;
@@ -25,12 +25,12 @@ body{
     font-family: $karla-normal;
 }
 
-.width-wrapper{
-    padding-left: 8%;
-    padding-right: 8%;
+.width-wrapper {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,51 +38,177 @@ body{
     height: 15vh;
 }
 
-.header-logo{
+.header-logo {
     height: 1.5rem;
     width: auto;
 }
 
-
-.nav-items, .nav-btn_close{
+.nav-items,
+.nav-btn_close {
     display: none;
 }
 
 // hero section
-.hero-img{
+.hero-img {
     display: flex;
 }
 
-.hero-content{
-    height: 70vh;
-    background: 
-    url('../images/mobile/bg-pattern-intro-left-mobile.svg') no-repeat,
-    url('../images/mobile/bg-pattern-intro-right-mobile.svg') no-repeat right bottom -140%,
-    $dark-violet;
+.hero-content {
+    position: relative;
+    height: 105vh;
+    background: url('../images/mobile/bg-pattern-intro-left-mobile.svg')
+            no-repeat,
+        url('../images/mobile/bg-pattern-intro-right-mobile.svg') no-repeat
+            right bottom ;
     color: white;
     text-align: center;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    h1{
+    // display: inline-flex;
+    // flex-direction: column;
+    // justify-content: center;
+    h1 {
+        padding-top:30%;
         font-family: $dm_serif;
         font-weight: $dm_serif-normal;
         font-size: 2.8rem;
     }
-    p{
+    p {
         padding: 1rem 0 2rem;
         line-height: 1.5rem;
     }
-    span{
-        
+    span {
         margin: 1rem 0;
-        a{
+        a {
             text-transform: uppercase;
-            letter-spacing: .1rem;
+            letter-spacing: 0.1rem;
             border: 2px solid $white;
-            padding: .75rem 1.75rem;
+            padding: 0.75rem 1.75rem;
             color: $white;
             font-weight: $karla-bold;
         }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        background: $dark-violet;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 25%;
+        z-index: -1;
+    }
+    hr {
+        margin-top: 85%;
+        color: lighten($dark-violet,70%);
+        width: 40%;
+    }
+}
+
+.about-us {
+    padding-bottom: 5rem ;
+    text-align: center;
+    
+    h2 {
+        font-family: $dm_serif;
+        font-weight: $dm_serif-normal;
+        font-size: 2.5rem;
+        padding: 1rem 0;
+    }
+}
+
+.card-wrapper {
+    padding: 2rem 0;
+}
+.card {
+    padding: 2rem 0;
+    h3 {
+        font-family: $dm_serif;
+        font-weight: $dm_serif-normal;
+        font-size: 1.5rem;
+        padding: 1.25rem 0;
+    }
+    p {
+        color: $dark-grayish-violet;
+        line-height: 1.5rem;
+    }
+}
+
+.cta {
+    color: white;
+    padding: 2rem 0;
+}
+
+.cta-wrapper {
+    padding: 3rem 2rem;
+    background: url('../images/mobile/bg-pattern-how-we-work-mobile.svg')
+            no-repeat top right,
+        $dark-violet;
+    text-align: center;
+    h2 {
+        font-family: $dm_serif;
+        font-weight: $dm_serif-normal;
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+    a {
+        display: inline-block;
+        margin: 1rem 0;
+        border: 2px $white solid;
+        padding: 0.75rem 1.75rem;
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.footer {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.nav-top {
+    padding-top: 5rem;
+    background: url('../images/mobile/bg-pattern-footer-mobile.svg') no-repeat;
+    .footer-logo {
+        height: 1.5rem;
+        width: auto;
+    }
+    .social-links {
+        display: block;
+        padding: 2rem 0;
+        ul {
+            display: flex;
+            justify-content: center;
+            li {
+                padding: 0 0.5rem;
+            }
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        margin: 0 8%;
+        border-bottom: 1px solid lighten($dark-grayish-violet,30%);
+    }
+}
+.footer{
+    padding-bottom: rem;
+}
+.nav-footer{
+    padding: 2rem 0;
+}
+.nav-footer-card {
+    text-transform: uppercase;
+    h4 {
+        padding: 1rem 0;
+        color: $dark-grayish-violet;
+        font-weight: $karla-bold;
+    }
+    ul{
+        text-align: center;
+    }
+    li{
+        padding: .25rem 0;
+        color: $dark-violet;
+        font-weight: $karla-bold;
     }
 }
